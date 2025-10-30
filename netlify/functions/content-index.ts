@@ -1,6 +1,11 @@
 import { Handler } from '@netlify/functions';
 import { octokit, githubConfig } from './utils/github';
-import { corsHeaders } from './utils/verify-token';
+
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
+  'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+};
 
 interface Novel {
   id: string;
