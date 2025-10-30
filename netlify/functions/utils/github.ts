@@ -2,8 +2,8 @@ import { Octokit } from '@octokit/rest';
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN || '';
 const GITHUB_OWNER = process.env.GITHUB_OWNER || '';
-const GITHUB_REPO = process.env.GITHUB_REPO || 'paokelsheavens-main';
-const GITHUB_BRANCH = process.env.GITHUB_BRANCH || 'main';
+const GITHUB_REPO = process.env.GITHUB_REPO || 'paokelsheavens-repo';
+const GITHUB_BRANCH = process.env.GITHUB_BRANCH || 'main-branch';
 
 export const octokit = new Octokit({ auth: GITHUB_TOKEN });
 
